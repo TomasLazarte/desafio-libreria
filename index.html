@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/5/minty/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Desafío Librerías</title>
+</head>
+<body>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Heladería Frutilin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="pedidos" class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>           
+    </header>
+    <div class="container">
+        <img src="./img/helados.jpeg" alt="fondo-banner-helados">
+    </div>
+    <main class="container">
+        <div class="container">
+            <form id="formPedido" class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputUsername" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputNumber" class="form-label">Telefono</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="1112345678">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputAddress" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputState" class="form-label">Gustos</label>
+                    <select id="gustoUno" class="form-select">
+                        <option selected>...</option>
+                        <option>Chocolate</option>
+                        <option>Chocolate Amargo</option>
+                        <option>Chocolate Blanco</option>
+                        <option>Dulce de Leche</option>
+                        <option>Dulce de Leche Granizado</option>
+                        <option>Dulce de Leche Bombón</option>
+                    </select> 
+                    <select id="gustoDos" class="form-select">
+                        <option selected>...</option>
+                        <option>Crema Americana</option>
+                        <option>Vainilla</option>
+                        <option>Frutilla a la Crema</option>
+                        <option>Tramontana</option>
+                        <option>Tiramisú</option>
+                        <option>Crema Oreo</option>
+                    </select> 
+                    <select id="gustoTres" class="form-select">
+                        <option selected>...</option>
+                        <option>Limón</option>
+                        <option>Cereza</option>
+                        <option>Frutilla</option>
+                        <option>Frambuesa</option>
+                    </select> 
+                </div>
+                <div class="col-md-6">
+                    <label for="inputState" class="form-label">Cantidad</label>
+                    <select id="cantidad" class="form-select">
+                        <option selected>...</option>
+                        <option>1/4  KG</option>
+                        <option>1/2 KG</option>
+                        <option>1 KG</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button id="botonComprar" type="submit" class="btn btn-primary btn-secondary">Comprar</button>
+                </div>
+            </form>
+            <br>
+            <div id="infoPedido"></div>
+            <div class="container">
+                <button id="verPedidos" type="submit" class="btn btn-primary btn-secondary">&#128274 Pedidos</button>
+                <table id="listaPedidos" class="table table-hover">
+                </table>    
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
