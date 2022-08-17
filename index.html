@@ -35,11 +35,14 @@
             </div>
         </nav>           
     </header>
-    <div class="container">
+    <div id="banner" class="container">
         <img src="./img/helados.jpeg" alt="fondo-banner-helados">
     </div>
     <main class="container">
-        <div class="container">
+        <div class="container" id="cuerpo">
+            <div id="productos" class="container">
+                
+            </div>
             <form id="formPedido" class="row g-3">
                 <div class="col-md-6">
                     <label for="inputUsername" class="form-label">Nombre</label>
@@ -91,13 +94,14 @@
                     </select>
                 </div>
                 <div class="col-12">
-                    <button id="botonComprar" type="submit" class="btn btn-primary btn-secondary">Comprar</button>
+                    <button id="botonComprar" type="submit" class="btn btn-primary btn-primary">Comprar</button>
                 </div>
             </form>
             <br>
             <div id="infoPedido"></div>
+            <br>
             <div class="container">
-                <button id="verPedidos" type="submit" class="btn btn-primary btn-secondary">&#128274 Pedidos</button>
+                <button id="verPedidos" type="submit" class="btn btn-primary btn-primary">&#128274 Pedidos</button>
                 <table id="listaPedidos" class="table table-hover">
                 </table>    
             </div>

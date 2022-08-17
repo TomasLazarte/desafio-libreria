@@ -2,17 +2,34 @@ body {
     font-weight: bold;
 }
 
-div img {
+#banner img {
     width: 100%;
 }
 
-main .container {
+main #cuerpo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-image: url("./img/fondo-helados.jpg");
+    background-image: url("./img/fondo-cuerpo.webp");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20px;
+}
+
+#productos {
+    display: flex;
+}
+
+#productos .card {
+    width: 14rem;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.card img {
+    max-width: 12rem;
+    max-height: 12rem;
 }

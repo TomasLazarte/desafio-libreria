@@ -1,3 +1,23 @@
+const productos = document.getElementById("productos")
+
+fetch('./json/productos.json')
+.then(response => response.json())
+.then(data => {
+    data.forEach((producto) => {
+        productos.innerHTML += `  
+            <div class="card text-white bg-secondary mb-3">
+                <img src="./img/${producto.img}" class="card-img-top" alt="potes-de-helados">
+                <div class="card-header">${producto.nombre}</div>
+                <div class="card-body">
+                    <h5 class="card-title">$ ${producto.precio}</h4>
+                    <p class="card-text">3 GUSTOS A ELECCIÓN</p>
+                    <button id="botonComprar" type="submit" class="btn btn-primary">Detalles</button>
+                </div>
+            </div>
+        `
+    })
+})
+
 class Persona {
     constructor(nombre, telefono, direccion, cantidad, gustoUno, gustoDos, gustoTres) {
         this.nombre = nombre
@@ -100,7 +120,7 @@ verPedidos.addEventListener("click", () => {
         info += 
         `
         <tbody>
-            <tr class="table-secondary">
+            <tr class="table-primary">
                 <th scope="row">${persona.nombre}</th>
                 <td>${persona.direccion}</td>
                 <td>${persona.cantidad}</td>
@@ -111,3 +131,5 @@ verPedidos.addEventListener("click", () => {
     })
     listaPedidos.innerHTML = info
 })
+
+

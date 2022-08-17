@@ -1,0 +1,6 @@
+[
+    {"nombre": "Pote 1/4 KG", "precio": 350, "img": "cuarto-kg.png"},
+    {"nombre": "Pote 1/2 KG", "precio": 650, "img": "medio-kg.png"},
+    {"nombre": "Pote 1 KG", "precio": 1000, "img": "kg.png"},
+    {"nombre": "Pote 2 KG", "precio": 1800, "img": "dos-kg.png"}
+]
